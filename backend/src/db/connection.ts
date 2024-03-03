@@ -4,6 +4,7 @@ import { config } from "dotenv";
 async function connectToDatabase() {
   try {
     await connect(process.env.MONGODB_URL);
+    console.log("Database Connected Succefully!");
   } catch (error) {
     console.log(error);
     throw new Error("cannot connect with mongo DB!");

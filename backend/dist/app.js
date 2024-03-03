@@ -7,7 +7,7 @@ import cors from "cors";
 config();
 const app = express();
 //START -> middlewares
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: ["http://localhost:5173", "https://yash-gpt-frontend.onrender.com"], credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 //END -> middlewares
